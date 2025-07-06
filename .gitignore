@@ -1,0 +1,11 @@
+.venv
+.idea/
+
+mlartifacts/
+
+mlruns/
+
+
+__pycache__
+
+preprocess.pkl
