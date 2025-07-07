@@ -1,9 +1,12 @@
-Employee Salary Prediction Pipeline
+#Employee Salary Prediction Pipeline
 Overview
 This project delivers a robust machine learning pipeline to predict employee salaries using job and company features.
 It covers data ingestion, preprocessing, outlier handling, model selection, explainability, drift detection, and experiment tracking.
+---
+![Prediction Ui](https://github.com/user-attachments/assets/0cf5e97d-65a9-4d3e-a42d-7a4bead14f2d)
 
-Features
+---
+##Features
 Data Ingestion: Fetches data from PostgreSQL via SQLAlchemy.
 
 Preprocessing: Handles missing values, outliers, and categorical encoding.
@@ -19,10 +22,10 @@ Explainability: Generates SHAP plots for feature importance.
 Drift Detection: Uses Evidently to monitor and log data drift.
 
 Deployment Ready: Exports a scikit-learn pipeline for inference.
-
-Project Structure
+---
+##Project Structure
 text
-.
+```.
 ├── data_ingestion.py
 ├── main.py
 ├── requirements.txt
@@ -31,6 +34,10 @@ text
 ├── drift_reports/
 ├── shap_outputs/
 └── ...
+```
+
+![Screenshot 2025-07-07 014756](https://github.com/user-attachments/assets/b389e78f-cb3c-41d3-9a61-0f4ac132e999)
+
 Setup
 Clone the repository:
 
@@ -44,6 +51,9 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 Configure your database:
+![Screenshot 2025-07-06 015356](https://github.com/user-attachments/assets/a030a7f8-b656-4128-8854-0097a17ea3d5)
+
+
 
 Edit the connection details in main.py or your configuration file.
 
@@ -71,9 +81,13 @@ pipeline = joblib.load('saved_models/final_pipeline_<model_name>_new_pipeline.pk
 predictions = pipeline.predict(X_new)  # X_new is a DataFrame with the same columns as training
 ```
 MLflow Tracking
+
 All model parameters, metrics, and artifacts (including SHAP plots and drift reports) are logged to MLflow.
+![MLFlow with Experiments](https://github.com/user-attachments/assets/e0bf2751-1c31-4308-89eb-90f09a3a14dc)
+
 
 Models are registered and versioned in the MLflow Model Registry.
+
 
 Model Explainability
 SHAP summary plots are generated for each model and logged as artifacts.
@@ -91,6 +105,9 @@ Add/remove models: Edit the models dictionary in main.py.
 Change features: Edit the feature selection section.
 
 Tune hyperparameters: Update the params in the models dictionary.
+
+
+
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
