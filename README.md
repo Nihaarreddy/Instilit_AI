@@ -1,10 +1,15 @@
-##Employee Salary Prediction Pipeline
+##                                                       Employee Salary Prediction Pipeline
 ---
 Overview
+
 This project delivers a robust machine learning pipeline to predict employee salaries using job and company features.
 It covers data ingestion, preprocessing, outlier handling, model selection, explainability, drift detection, and experiment tracking.
+
+
 ---
 ![Prediction Ui](https://github.com/user-attachments/assets/0cf5e97d-65a9-4d3e-a42d-7a4bead14f2d)
+
+
 
 ---
 ##Features
@@ -23,6 +28,8 @@ Explainability: Generates SHAP plots for feature importance.
 Drift Detection: Uses Evidently to monitor and log data drift.
 
 Deployment Ready: Exports a scikit-learn pipeline for inference.
+
+
 ---
 ##Project Structure
 text
@@ -37,7 +44,11 @@ text
 └── ...
 ```
 
+
+
 ![Screenshot 2025-07-07 014756](https://github.com/user-attachments/assets/b389e78f-cb3c-41d3-9a61-0f4ac132e999)
+
+
 
 Setup
 Clone the repository:
@@ -52,6 +63,8 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 Configure your database:
+
+
 ![Screenshot 2025-07-06 015356](https://github.com/user-attachments/assets/a030a7f8-b656-4128-8854-0097a17ea3d5)
 
 
@@ -63,14 +76,19 @@ Edit the connection details in main.py or your configuration file.
 ```bash
 mlflow ui
 ```
+
+
 Access MLflow UI at http://localhost:5000.
 
 Usage
 Run the pipeline:
 
+
 ```bash
 python main.py
 ```
+
+
 Check MLflow UI:
 View experiments, runs, and model artifacts at http://localhost:5000.
 
