@@ -2,7 +2,7 @@ Employee Salary Prediction Pipeline
 Overview
 This project delivers a robust machine learning pipeline to predict employee salaries using job and company features.
 It covers data ingestion, preprocessing, outlier handling, model selection, explainability, drift detection, and experiment tracking.
-```bash
+
 Features
 Data Ingestion: Fetches data from PostgreSQL via SQLAlchemy.
 
@@ -34,37 +34,42 @@ text
 Setup
 Clone the repository:
 
-bash
+```bash
 git clone https://github.com/Nihaarreddy/Instilit_AI.git
 cd Instilit_AI
+```
 Install dependencies:
 
-bash
+```bash
 pip install -r requirements.txt
+```
 Configure your database:
 
 Edit the connection details in main.py or your configuration file.
 
 (Optional) Start MLflow Tracking Server:
 
-bash
+```bash
 mlflow ui
+```
 Access MLflow UI at http://localhost:5000.
 
 Usage
 Run the pipeline:
 
-bash
+```bash
 python main.py
+```
 Check MLflow UI:
 View experiments, runs, and model artifacts at http://localhost:5000.
 
 Model Inference Example:
 
-python
+```python
 import joblib
 pipeline = joblib.load('saved_models/final_pipeline_<model_name>_new_pipeline.pkl')
 predictions = pipeline.predict(X_new)  # X_new is a DataFrame with the same columns as training
+```
 MLflow Tracking
 All model parameters, metrics, and artifacts (including SHAP plots and drift reports) are logged to MLflow.
 
